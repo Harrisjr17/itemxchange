@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'ItemXChange') }}</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -22,7 +22,13 @@
 <body>
     <div id="app" class="w-100 h-100">
         @include('layouts.navbar')
-            @yield('content')
+        <div class="py-4 container">
+            <div class="col-12">
+                <div class="row">
+                    @yield('content')
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
